@@ -14,9 +14,10 @@ console.log(document)
 document.querySelector(".body")
 
 var hamburger = document.querySelector(".hamburger-container")
-
+var mobilelinkscontainer = document.querySelector(".mobile-linkscontainer")
 console.log(hamburger)
 
 function addandremove() {
 hamburger.classList.toggle("showburger")
+mobilelinkscontainer.classList.toggle("showburgerlinks")
 }

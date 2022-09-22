@@ -15,6 +15,9 @@ img {
     height: 100%;
     /* border-radius: 25px; */
 }
+html {
+    scroll-behavior: smooth;
+}
 /*==== major fixes ends here====*/
 /*==== reusable class starts here  */
  .btn {
@@ -30,7 +33,7 @@ img {
     color: var(--main-color);
  }
  .btn-white {
-    background-color: var(--white-color);
+    background-color: transparent;
     border: 2px solid var(--main-color);
  }
  .btn-white:hover {
@@ -72,18 +75,22 @@ header {
     align-items: center;
 
 }
-header ul {
+.desktop-linkcontainer ul {
     list-style: none;
 
       display: flex;
 
 }
-header li {
+.desktop-linkcontainer a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+.desktop-linkcontainer li {
     padding: 15px 20px;
     border: 2px solid transparent;
     color: var(--main-color);
 }
-header li:hover {
+.desktop-linkcontainer li:hover {
     border: 2px solid var(--main-color);
 }
 .nav-mobile {
@@ -110,6 +117,7 @@ header li:hover {
     display: flex;
     align-items: center;
     height: 30px;
+    z-index: 100;
 }
 .mobile-logo {
     padding: 5px;
@@ -125,7 +133,7 @@ header li:hover {
 }
 .menu::before {
     content: '';
-    background-color: tomato;
+    background-color: var(--white-color);
     width: 100%;
     height: 3px;
     position: absolute;
@@ -134,7 +142,7 @@ header li:hover {
 }
 .menu::after {
     content: '';
-    background-color: black;
+    background-color: var(--white-color);
     width: 100%;
     height: 3px;
     position: absolute;
@@ -146,9 +154,11 @@ header li:hover {
 }
 .showburger .menu::after {
     transform: rotate(-45deg);
+    background-color: var(--main-color);
 }
 .showburger .menu::before {
     transform: rotate(45deg);
+    background-color: var(--main-color);
 }
 /*==== header section ends here====*/
 
@@ -190,6 +200,48 @@ header li:hover {
 }
 .banner-icons {
      margin: 0 0 0 10px;
+}
+.mobile-linkscontainer {
+    display: none;
+    width: 50%;
+    background: var(--main-color);
+    height: 100%;
+    position: fixed;
+    right: 0;
+    transform: translateY(10%);
+    transition: 3s;
+    top: 0;
+    z-index: 3;
+}
+.showburgerlinks {
+     display: block;
+    transform: translateY(0);
+}
+.mobile-linkscontainer ul {
+    list-style: none;
+}
+.mobile-linkscontainer a {
+    display: block;
+    text-decoration: none;
+    color: var(--white-color);
+    padding: 25px 20px;
+}
+.mobile-linkscontainer a:hover {
+    background-color: var(--white-color);
+    color: var(--main-color);
+}
+.mobile-linkscontainer button {
+    margin: 0 0 0 20px;
+    background-color: transparent;
+    border: 2px solid var(--white-color);
+    color: var(--white-color);
+}
+.mobile-linkscontainer button:hover {
+    background-color: gray;
+}
+.mobile-linkscontainer .active {
+    background-color: var(--white-color);
+    color: var(--main-color);
 }
 /* header banner section ends here */
 /* header counter section starts here */
@@ -406,6 +458,7 @@ header li:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    object-fit: cover;
 }
 
 
