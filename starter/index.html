@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./defaults.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./mobile.css">
@@ -16,11 +19,12 @@
 <body class="body">
 
 
+
     <header>
 
         <nav class="nav-desktop">
             <div class="desktop-logo">
-                <i class="fa-regular fa-hand-lizard"></i>
+                <i class="fa-solid fa-pizza-slice"></i>
             </div>
             <div class="desktop-linkcontainer">
             <ul>
@@ -39,16 +43,18 @@
         <nav class="nav-mobile">
             <div class="nav-brand">
                 <div class="mobile-logo">
-                    <i class="fa-regular fa-hand-lizard"></i>
+                    <i class="fa-solid fa-pizza-slice"></i>
                 </div>
                 <span>Foodplug</span>
             </div>
 
-            <div class="hamburger-container" onclick="addandremove()">
+            <!-- <div class="hamburger-container" onclick="addandremove()">
                 <div class="menu"></div>
-            </div>
+            </div> -->
+            <div id="menu"></div>
 
-            <div class="mobile-linkscontainer">
+            <div id="mobile">
+                    <h2>Foodplug</h2>
                     <ul>
                         <li><a href="#" class="active"> Home</a></li>
                         <li><a href="#aboutus">About Us </a></li>
@@ -107,6 +113,7 @@
 
         <div class="about-us" >
             <div class="about-us-container">
+
             <div class="about-us-cards-img">
                 <img src="./img/about1.png" alt="">
             </div>
@@ -189,7 +196,7 @@
                         <button class="btn btn-red">Order more</button>
                     </div>
                 </div>
-                <div class="food-card-item" >
+                <div class="food-card-item ab" >
                     <div class="food-img-container">
                         <img src="./img/explore1.jpg" alt="">
                     </div>
