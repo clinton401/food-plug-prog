@@ -59,7 +59,7 @@ header {
 .desktop-logo {
     width: 100px;
     height: 100px;
-    background-color: var(--main-color);
+    background-color: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,6 +76,121 @@ header {
     align-items: center;
 
 }
+.butn {
+    background-color: #ffff;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: inset 0px 8px 60px rgba(0, 0, 0, 0.1),
+                inset 0px 8px 8px rgba(0, 0, 0, 0.1),
+                inset 0px -4px 4px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 9px;
+      left: 49%;
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      padding: 0 2px;
+}
+.buttn {
+    background-color: #ffff;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: inset 0px 8px 60px rgba(0, 0, 0, 0.1),
+                inset 0px 8px 8px rgba(0, 0, 0, 0.1),
+                inset 0px -4px 4px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 9px;
+      left: 49%;
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      padding: 0 2px;
+}
+.btn_indicator {
+    background-color: #ffff;
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.2);
+    width: 35px;
+    height: 35px;
+    position: relative;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+.btn_icon_container {
+    width: 100%;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}.btn_icon {
+    color: rgb(255, 255, 50);
+    font-size: 1.7rem;
+}
+/* darkmode starts here */
+.darkmode .btn_indicator {
+    /* transition: 2s; */
+    transform: translateX(2.9em);
+    background-color: #5a5a5a;
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.3);
+}
+body.darkmode {
+    background-color: #5a5a5a;
+    color: white;
+}
+.darkmode .butn {
+    box-shadow: inset 0px 8px 60px rgba(0, 0, 0, 0.3),
+                inset 8px 0px 8px rgba(0, 0, 0, 0.3),
+                inset 0px -4px 4px rgba(0, 0, 0, 0.3);
+}
+.darkmode .header-banner-section {
+    color: white;
+    background-image: none;
+    background-color: #5a5a5a;
+}
+.darkmode .btn_icon {
+    color: white;
+}
+.darkmode header {
+    background-color: #121212;
+}
+.darkmode .header-counter-section {
+    background-color: #121212;
+    border: 3px solid #121212;
+}
+.darkmode .btn-red:hover {
+    background-color: #121212;
+    color: white;
+    border: 3px solid #121212;
+    transition: 0.5s;
+}
+.darkmode .first-btn:hover {
+    border: 3px solid #5a5a5a;
+    background-color: #5a5a5a;
+
+}
+.darkmode input {
+    background-color: #121212;
+    border: 3p;
+}
+.darkmode .wave-p {
+    color: black;
+}
+.darkmode footer {
+    background-color: #121212;
+}
+/* darkmode ends here */
+/* animation starts here */
+.btn_icon.animated {
+    animation: spin 0.5s;
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* animation ends here */
 .desktop-linkcontainer ul {
     list-style: none;
 
@@ -91,8 +206,9 @@ header {
     border: 2px solid transparent;
     color: var(--main-color);
 }
-.desktop-linkcontainer li:hover {
-    border: 2px solid var(--main-color);
+.desktop-linkcontainer a:hover {
+    color: #5a5a5a;
+    text-decoration: underline;
 }
 .nav-mobile {
     display: none;
@@ -104,6 +220,7 @@ header {
 .nav-brand {
     display: flex;
     font-size: 25px;
+    margin: 0 auto;
     /* justify-content: center; */
 
     /* width: 90%; */
@@ -129,7 +246,7 @@ header {
 .mobile-logo {
     padding: 5px;
     /* margin: 0 auto; */
-     /* border: 3px solid var(--white-color); */
+     border: 3px solid none;
 }
 #menu {
     width: 25px;
@@ -237,16 +354,17 @@ justify-content: flex-end;
 #mobile.active {
     right: 0px;
 }
-#mobile h2 {
+#mobile h3 {
     color: black;
-    /* background-color:  gray;
+    /* /* background-color:  gray; */
 
-    border: 3px solid gray; */
+    border: 3px solid gray;
     /* background-color: transparent; */
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     font-weight: 900;
+
     padding-top: 10px;
     padding-bottom: 30px;
 }
@@ -283,7 +401,7 @@ justify-content: flex-end;
     background-color: black;
     color: white;
 }
-/* .mobile-linkscontainer .active {
+    /* .mobile-linkscontainer .active {
     background-color: var(--white-color);
     color: var(--main-color);
 } */

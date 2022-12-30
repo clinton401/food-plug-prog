@@ -1,5 +1,22 @@
 @media screen and (max-width: 800px){
  /* header section starts here  */
+ header .butn {
+    position: absolute;
+    left: 1%;
+    top: 25px;
+    width: 50px;
+    height: 25px;
+ }
+    header .btn_indicator {
+        width: 23px;
+        height: 21px;
+    }
+    .darkmode .btn_indicator {
+        transform: translateX(1.7em);
+    }
+    header .btn_icon {
+        font-size: 1.3rem;
+    }
     .nav-desktop {
         display: none;
      }
@@ -91,5 +108,22 @@ footer .button-a {
     }
     .food-card-container .ab {
         margin: 0 auto;
+    }
+}
+
+
+@media screen and (min-width: 800px) and (max-width: 1260px) {
+
+    .desktop-linkcontainer .butn {
+        position: absolute;
+        left: 30%;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 900px) {
+
+
+    .desktop-linkcontainer .butn {
+        position: absolute;
+        left: 20%;
     }
 }
