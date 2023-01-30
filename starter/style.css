@@ -656,8 +656,8 @@ justify-content: flex-end;
     color: var(--white-color);
 }
 #submit:hover {
-    background-color: #5a5a5a;
-    border: 3px solid #5a5a5a;
+    background-color: #121212;
+    border: 3px solid #121212;
 }
 
 footer {
